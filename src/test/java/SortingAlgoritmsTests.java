@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-public class BubbleSortTests {
+public class SortingAlgoritmsTests {
     private int[] sourceArr1;
     private int[] sourceArr2;
     private int[] expectedArr1;
@@ -23,6 +23,14 @@ public class BubbleSortTests {
 
     @Test
     public void testBubbleSort() {
+        BubbleSort.bubleSort(sourceArr1);
+        BubbleSort.bubleSort(sourceArr2);
+        assertEquals(Arrays.toString(expectedArr1), Arrays.toString(sourceArr1));
+        assertEquals(Arrays.toString(expectedArr2), Arrays.toString(sourceArr2));
+    }
+
+    @Test
+    public void testInsertionSort() {
         BubbleSort.bubleSort(sourceArr1);
         BubbleSort.bubleSort(sourceArr2);
         assertEquals(Arrays.toString(expectedArr1), Arrays.toString(sourceArr1));
